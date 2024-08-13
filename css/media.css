@@ -1,0 +1,67 @@
+@media (max-width: 1400px) {
+  .main-container {
+    padding: 30px 40px;
+  }
+
+  .main__form {
+    width: 100%;
+  }
+
+  .sidebar__logo {
+    margin-bottom: 50px;
+  }
+
+  .nav__item {
+    padding: 25px 32px;
+    gap: 20px;
+  }
+
+  .wrapp-svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    display: flex;
+  }
+  .main__list-person {
+    flex-direction: column;
+  }
+
+  .main__item-person {
+    width: 100%;
+  }
+
+  .main__item-mainInfo {
+    flex-direction: column;
+  }
+
+  .main__input {
+    width: 100%;
+  }
+
+  .main__list-files {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .wrapp-title {
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 20px 10px;
+  }
+
+  .sidebar__logo {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 568px) {
+}

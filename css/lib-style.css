@@ -1,0 +1,5 @@
+.choices[data-type*="select-one"] .choices__inner {
+  border-radius: 10px;
+  border: 1px solid #959595;
+  border-radius: 10px;
+}

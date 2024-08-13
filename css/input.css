@@ -1,0 +1,134 @@
+.input-file-row {
+  display: inline-block;
+}
+
+.input-file {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.input-file span {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: middle;
+  color: rgb(255 255 255);
+  text-align: center;
+  border-radius: 10px;
+  background-color: #008df2;
+  line-height: 22px;
+  height: 40px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  transition: background-color 0.2s;
+}
+.input-file input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+/* Focus */
+.input-file input[type="file"]:focus + span {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Hover/Active */
+.input-file:hover span {
+  background-color: #0078cd;
+}
+.input-file:active span {
+  background-color: #00528d;
+}
+
+/* Disabled */
+.input-file input[type="file"]:disabled + span {
+  background-color: #eee;
+}
+
+/* Список файлов */
+.input-file-list {
+  padding: 10px 0;
+}
+
+.input-file-list-item {
+  margin-bottom: 10px;
+}
+
+.input-file-list-remove {
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.input-file-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 16px;
+  position: relative;
+}
+
+.input-file-svg {
+  position: relative;
+}
+
+.input-file-svg::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/pdf-icon.svg") no-repeat center center / contain;
+}
+
+.input-file-list-name {
+  /* flex: 1; */
+  display: inline-block;
+  position: relative;
+  max-width: 150px;
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  color: #008df2;
+  white-space: nowrap;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+.input-file-list-remove {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.input-file-list-remove {
+  text-decoration: none;
+  color: #525968;
+  position: relative;
+  font-weight: 600;
+}
+
+.input-file-list-remove::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  top: 50%;
+  left: 50%;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #00000017;
+}

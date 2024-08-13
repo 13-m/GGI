@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Light"), local("TTFirsNeue-Light"),
+    url("../font/TTFirsNeue-Light.eot?#iefix") format("embedded-opentype"),
+    url("../font/TTFirsNeue-Light.woff2") format("woff2"),
+    url("../font/TTFirsNeue-Light.woff") format("woff"),
+    url("../font/TTFirsNeue-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Regular"), local("TTFirsNeue-Regular"),
+    url("../font/TTFirsNeue-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/TTFirsNeue-Regular.woff2") format("woff2"),
+    url("../font/TTFirsNeue-Regular.woff") format("woff"),
+    url("../font/TTFirsNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue DemiBold"), local("TTFirsNeue-DemiBold"),
+    url("../font/TTFirsNeue-DemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../font/TTFirsNeue-DemiBold.woff2") format("woff2"),
+    url("../font/TTFirsNeue-DemiBold.woff") format("woff"),
+    url("../font/TTFirsNeue-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Bold"), local("TTFirsNeue-Bold"),
+    url("../font/TTFirsNeue-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../font/TTFirsNeue-Bold.woff2") format("woff2"),
+    url("../font/TTFirsNeue-Bold.woff") format("woff"),
+    url("../font/TTFirsNeue-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("TT Firs Neue Medium"), local("TTFirsNeue-Medium"),
+    url("../font/TTFirsNeue-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../font/TTFirsNeue-Medium.woff2") format("woff2"),
+    url("../font/TTFirsNeue-Medium.woff") format("woff"),
+    url("../font/TTFirsNeue-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
