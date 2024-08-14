@@ -23,6 +23,10 @@
   .logo {
     margin-bottom: 10px;
   }
+
+  .nav__img {
+    width: 50px;
+  }
 }
 
 @media (max-width: 1024px) {
