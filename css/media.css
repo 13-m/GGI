@@ -67,12 +67,53 @@
 }
 
 @media (max-width: 768px) {
+  .main-container {
+    padding: 25px 30px;
+  }
   .main__title {
     text-align: center;
   }
   .initials {
     flex-direction: column;
   }
+
+  .main__list-diploma {
+    flex-direction: column;
+  }
 }
 @media (max-width: 568px) {
+  .main__form {
+    padding-left: 15px;
+  }
+  .sidebar,
+  .nav {
+    width: 70px;
+  }
+
+  .mainInfo {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  }
+  .wrapp-title,
+  .mainInfo,
+  .abit {
+    margin-bottom: 20px;
+  }
+
+  .wrapp-svg,
+  .nav__img {
+    width: 40px;
+  }
+
+  .main-container {
+    padding: 10px 15px;
+  }
+
+  .nav__item {
+    padding: 5px 10px;
+  }
+
+  .nav__text {
+    margin: 0;
+  }
 }
