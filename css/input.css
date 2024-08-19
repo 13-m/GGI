@@ -6,6 +6,7 @@
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .input-file span {
@@ -93,8 +94,6 @@
 }
 
 .input-file-list-name {
-  /* flex: 1; */
-  display: inline-block;
   position: relative;
   max-width: 150px;
   display: block;
@@ -105,7 +104,8 @@
   white-space: nowrap;
   font-weight: 600;
   text-overflow: ellipsis;
-  overflow: hidden; /* Обрезаем всё за пределами блока */
+  line-height: normal;
+  overflow: hidden;
 }
 
 .input-file-list-remove {

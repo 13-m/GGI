@@ -38,8 +38,8 @@
                 </div>
               </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">
+            <li class="nav__item active">
+              <a href="#" class="nav__link" data-target="data">
                 <div class="wrapp-svg">
                   <svg
                     class="nav-svg"
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">
+              <a href="#" class="nav__link" data-target="achievement">
                 <div class="wrapp-svg">
                   <svg
                     class="nav-svg"
@@ -90,8 +90,8 @@
                 <p class="nav__text">Индивидуальные достижения</p>
               </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">
+            <li class="nav__item" id="examLink">
+              <a href="#" class="nav__link" data-target="exam">
                 <div class="wrapp-svg">
                   <svg
                     class="nav-svg"
@@ -162,244 +162,125 @@
             </svg>
           </button>
         </section>
-        <section class="main main-container">
-          <form
-            action="#!"
-            method="post"
-            enctype="multipart/form-data"
-            class="main__form"
-          >
-            <ul class="main__list">
-              <li class="main__item wrapp-title">
-                <h2 class="main__title">Персональные данные</h2>
-                <section class="switch-container">
-                  <input type="radio" id="option1" name="switch" checked />
-                  <input type="radio" id="option2" name="switch" />
-                  <div class="switch">
-                    <label for="option1" class="switch-option">
-                      <span class="switch-text">Абитуриент</span>
-                    </label>
-                    <label for="option2" class="switch-option">
-                      <span class="switch-text">Аспирант</span>
-                    </label>
+        <section class="main main-container data active">
+            <form
+              action="#!"
+              method="post"
+              enctype="multipart/form-data"
+              class="main__form"
+            >
+              <ul class="main__list">
+                <li class="main__item wrapp-title">
+                  <h2 class="main__title">Персональные данные</h2>
+                  <section class="switch-container">
+                    <input type="radio" id="option1" name="switch" checked />
+                    <input type="radio" id="option2" name="switch" />
+                    <div class="switch">
+                      <label for="option1" class="switch-option">
+                        <span class="switch-text">Абитуриент</span>
+                      </label>
+                      <label for="option2" class="switch-option">
+                        <span class="switch-text">Аспирант</span>
+                      </label>
+                    </div>
+                  </section>
+                </li>
+                <li class="main__item initials">
+                  <div id="image-container" class="image-container">
+                    <input type="file" id="file-input" accept="image/*" />
+                    <img
+                      id="image-preview"
+                      class="image-preview"
+                      src=""
+                      alt="Image Preview"
+                    />
                   </div>
-                </section>
-              </li>
-              <li class="main__item initials">
-                <div id="image-container" class="image-container">
-                  <input type="file" id="file-input" accept="image/*" />
-                  <img
-                    id="image-preview"
-                    class="image-preview"
-                    src=""
-                    alt="Image Preview"
-                  />
-                </div>
-                <ul class="main__list-person">
-                  <li class="main__item-person">
-                    <input
-                      class="main__input"
-                      type="text"
-                      name="lastName"
-                      placeholder="Фамилия"
-                      aria-label="Фамилия"
-                    />
-                  </li>
-                  <li class="main__item-person">
-                    <input
-                      class="main__input"
-                      type="text"
-                      name="firstName"
-                      placeholder="Имя"
-                      aria-label="Имя"
-                    />
-                  </li>
-                  <li class="main__item-person">
-                    <input
-                      class="main__input"
-                      type="text"
-                      name="middleName"
-                      placeholder="Отчество"
-                      aria-label="Отчество"
-                    />
-                  </li>
-                  <li class="main__item-person">
-                    <input
-                      class="main__input"
-                      type="email"
-                      name="email"
-                      pattern=".+@example\.com"
-                      placeholder="E-mail"
-                      aria-label="E-mail"
-                    />
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item mainInfo">
-                <h3 class="main__subtitle">Основная информация</h3>
-                <ul class="main__list-mainInfo">
-                  <li class="main__item-mainInfo">
-                    <label for="input" class="main__label main__input">
-                      <input class="main__input-date" type="date" id="input" />
-                      <span class="label-placeholder"
-                        >Дата рождения<span class="label-span"></span
-                      ></span>
-                    </label>
-
-                    <input
-                      type="text"
-                      class="main__input"
-                      name="studyPlace"
-                      placeholder="Место учебы"
-                      aria-label="Место учебы"
-                    />
-                  </li>
-                  <li class="main__item-mainInfo">
-                    <input
-                      type="text"
-                      class="main__input"
-                      name="specialty"
-                      placeholder="Специальность"
-                      aria-label="Специальность"
-                    />
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item document-uploads abit" id="abit">
-                <ul class="main__list-files grid-container">
-                  <li class="main__item-files first-item">
-                    <h3 class="main__subtitle">Диплом</h3>
-                    <label class="input-file">
+                  <ul class="main__list-person">
+                    <li class="main__item-person">
                       <input
-                        type="file"
-                        id="diploma"
-                        name="diploma"
-                        multiple
-                        aria-label="Выбрать файл"
+                        class="main__input"
+                        type="text"
+                        name="lastName"
+                        placeholder="Фамилия"
+                        aria-label="Фамилия"
                       />
-                      <span>Выбрать файл</span>
-                    </label>
-                    <div id="passport-files" class="input-file-list"></div>
-                  </li>
-                  <li class="main__item-files second-item">
-                    <h3 class="main__subtitle">Реферат</h3>
-                    <label class="input-file">
+                    </li>
+                    <li class="main__item-person">
                       <input
-                        type="file"
-                        id="report"
-                        name="file[]"
-                        multiple
-                        aria-label="Выбрать файл"
+                        class="main__input"
+                        type="text"
+                        name="firstName"
+                        placeholder="Имя"
+                        aria-label="Имя"
                       />
-                      <span>Выбрать файл</span>
-                    </label>
-                    <div id="report-files" class="input-file-list"></div>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item document-uploads">
-                <ul class="main__list-files grid-container">
-                  <li class="main__item-files first-item">
-                    <h3 class="main__subtitle">Паспорт</h3>
-                    <label class="input-file">
+                    </li>
+                    <li class="main__item-person">
                       <input
-                        type="file"
-                        id="passport"
-                        name="file[]"
-                        multiple
-                        aria-label="Выбрать файл паспорта"
+                        class="main__input"
+                        type="text"
+                        name="middleName"
+                        placeholder="Отчество"
+                        aria-label="Отчество"
                       />
-                      <span>Выбрать файл</span>
-                    </label>
-                    <div id="passport-files" class="input-file-list"></div>
-                  </li>
-                  <li class="main__item-files second-item">
-                    <h3 class="main__subtitle">СНИЛС</h3>
-                    <label class="input-file">
+                    </li>
+                    <li class="main__item-person">
                       <input
-                        type="file"
-                        id="snils"
-                        name="file[]"
-                        multiple
-                        aria-label="Выбрать файл СНИЛС"
+                        class="main__input"
+                        type="email"
+                        name="email"
+                        pattern=".+@example\.com"
+                        placeholder="E-mail"
+                        aria-label="E-mail"
                       />
-                      <span>Выбрать файл</span>
-                    </label>
-                    <div id="snils-files" class="input-file-list"></div>
-                  </li>
-                  <li class="main__item-files third-item">
-                    <h3 class="main__subtitle">ИНН</h3>
-                    <label class="input-file">
-                      <input
-                        type="file"
-                        id="inn"
-                        name="file[]"
-                        multiple
-                        aria-label="Выбрать файл ИНН"
-                      />
-                      <span>Выбрать файл</span>
-                    </label>
-                    <div id="inn-files" class="input-file-list"></div>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item diploma hidden" id="diplomSec">
-                <ul class="main__list-diploma">
-                  <li class="main__item-diploma">
-                    <h3 class="main__subtitle">Тема диссертационной работы</h3>
-                    <label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item mainInfo">
+                  <h3 class="main__subtitle">Основная информация</h3>
+                  <ul class="main__list-mainInfo">
+                    <li class="main__item-mainInfo">
+                      <label for="input" class="main__label main__input">
+                        <input class="main__input-date" type="date" id="input" />
+                        <span class="label-placeholder"
+                          >Дата рождения<span class="label-span"></span
+                        ></span>
+                      </label>
                       <input
                         type="text"
                         class="main__input"
-                        name="thesisTopic"
-                        placeholder="Тема диссертационной работы"
-                        aria-label="Тема диссертационной работы"
+                        name="studyPlace"
+                        placeholder="Место учебы"
+                        aria-label="Место учебы"
                       />
-                    </label>
-                  </li>
-                  <li class="main__item-diploma">
-                    <!-- <label> -->
-                    <h3 class="main__subtitle">Год обучения</h3>
-                    <label for="date-select">
-                      <select id="date-select" name="date"></select>
-                    </label>
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item name-scientist hidden" id="scientist">
-                <h3 class="main__subtitle">Научный руководитель</h3>
-                <ul class="main__list-scientist">
-                  <li class="main__item-scientist">
-                    <input
-                      type="text"
-                      name="fullNameScientist"
-                      class="main__input"
-                      placeholder="Ф.И.О."
-                      aria-label="Ф.И.О."
-                    />
-                    <input
-                      type="text"
-                      name="positionScientist"
-                      class="main__input"
-                      placeholder="Должность"
-                      aria-label="Должность"
-                    />
-                  </li>
-                  <li class="main__item-scientist">
-                    <input
-                      type="text"
-                      class="main__input"
-                      name="scientificDegree"
-                      placeholder="Научная степень"
-                      aria-label="Научная степень"
-                    />
-                  </li>
-                </ul>
-              </li>
-              <li class="main__item additional-files hidden" id="additional">
-                <ul class="main__list-plan">
-                  <li class="main__item-plan">
-                    <div class="inner-title">
+                    </li>
+                    <li class="main__item-mainInfo">
+                      <input
+                        type="text"
+                        class="main__input"
+                        name="specialty"
+                        placeholder="Специальность"
+                        aria-label="Специальность"
+                      />
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item document-uploads abit" id="abit">
+                  <ul class="main__list-files grid-container">
+                    <li class="main__item-files first-item">
+                      <h3 class="main__subtitle">Диплом</h3>
+                      <label class="input-file">
+                        <input
+                          type="file"
+                          id="diploma"
+                          name="diploma"
+                          multiple
+                          aria-label="Выбрать файл"
+                        />
+                        <span>Выбрать файл</span>
+                      </label>
+                      <ul id="passport-files" class="input-file-list"></ul>
+                    </li>
+                    <li class="main__item-files second-item">
                       <h3 class="main__subtitle">Реферат</h3>
                       <label class="input-file">
                         <input
@@ -407,117 +288,349 @@
                           id="report"
                           name="file[]"
                           multiple
-                          aria-label="Реферат"
+                          aria-label="Выбрать файл"
                         />
                         <span>Выбрать файл</span>
                       </label>
-                    </div>
-                    <div id="report-files" class="input-file-list"></div>
-                  </li>
-                  <li class="main__item-plan">
-                    <div class="inner-title">
-                      <h3 class="main__subtitle">
-                        Индивидуальный план научной деятельности по
-                        годам/семестрам
-                      </h3>
+                      <ul id="report-files" class="input-file-list"></ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item document-uploads">
+                  <ul class="main__list-files grid-container">
+                    <li class="main__item-files first-item">
+                      <h3 class="main__subtitle">Паспорт</h3>
                       <label class="input-file">
                         <input
                           type="file"
-                          id="individualPlan"
+                          id="passport"
                           name="file[]"
                           multiple
-                          aria-label="Индивидуальный план научной деятельности"
+                          aria-label="Выбрать файл паспорта"
                         />
+            
                         <span>Выбрать файл</span>
                       </label>
-                    </div>
-                    <div
-                      id="individualPlan-files"
-                      class="input-file-list"
-                    ></div>
-                  </li>
-                  <li class="main__item-plan">
-                    <div class="inner-title">
-                      <h3 class="main__subtitle">
-                        План научной деятельности по годам
-                      </h3>
+                      <ul id="passport-files" class="input-file-list"></ul>
+                    </li>
+                    <li class="main__item-files second-item">
+                      <h3 class="main__subtitle">СНИЛС</h3>
                       <label class="input-file">
                         <input
                           type="file"
-                          id="annualPlan"
+                          id="snils"
                           name="file[]"
                           multiple
-                          aria-label="План научной деятельности по годам"
+                          aria-label="Выбрать файл СНИЛС"
                         />
                         <span>Выбрать файл</span>
                       </label>
-                    </div>
-                    <div id="annualPlan-files" class="input-file-list"></div>
-                  </li>
-                  <li class="main__item-plan">
-                    <div class="inner-title">
-                      <h3 class="main__subtitle">
-                        Отзыв научного руководителя
-                      </h3>
+                      <ul id="snils-files" class="input-file-list"></ul>
+                    </li>
+                    <li class="main__item-files third-item">
+                      <h3 class="main__subtitle">ИНН</h3>
                       <label class="input-file">
                         <input
                           type="file"
-                          id="supervisorReview"
+                          id="inn"
                           name="file[]"
                           multiple
-                          aria-label="Отзыв научного руководителя"
+                          aria-label="Выбрать файл ИНН"
                         />
                         <span>Выбрать файл</span>
                       </label>
-                    </div>
-                    <div
-                      id="supervisorReview-files"
-                      class="input-file-list"
-                    ></div>
-                  </li>
-                  <li class="main__item-plan">
-                    <div class="inner-title">
-                      <h3 class="main__subtitle">
-                        Выписка из протокола семинара
-                      </h3>
-                      <label class="input-file">
+                      <ul id="inn-files" class="input-file-list"></ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item diploma hidden" id="diplomSec">
+                  <ul class="main__list-diploma">
+                    <li class="main__item-diploma">
+                      <h3 class="main__subtitle">Тема диссертационной работы</h3>
+                      <label>
                         <input
-                          type="file"
-                          id="seminarProtocol"
-                          name="file[]"
-                          multiple
-                          aria-label="Выписка из протокола семинара"
+                          type="text"
+                          class="main__input"
+                          name="thesisTopic"
+                          placeholder="Тема диссертационной работы"
+                          aria-label="Тема диссертационной работы"
                         />
-                        <span>Выбрать файл</span>
                       </label>
-                    </div>
-                    <div
-                      id="seminarProtocol-files"
-                      class="input-file-list"
-                    ></div>
-                  </li>
-                  <li class="main__item-plan">
-                    <div class="inner-title">
-                      <h3 class="main__subtitle">
-                        Протокол отчета на Ученом совете
-                      </h3>
-                      <label class="input-file">
-                        <input
-                          type="file"
-                          id="councilReport"
-                          name="file[]"
-                          multiple
-                          aria-label="Протокол отчета на Ученом совете"
-                        />
-                        <span>Выбрать файл</span>
+                    </li>
+                    <li class="main__item-diploma">
+                      <!-- <label> -->
+                      <h3 class="main__subtitle">Год обучения</h3>
+                      <label for="date-select">
+                        <select id="date-select" name="date"></select>
                       </label>
-                    </div>
-                    <div id="councilReport-files" class="input-file-list"></div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </form>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item name-scientist hidden" id="scientist">
+                  <h3 class="main__subtitle">Научный руководитель</h3>
+                  <ul class="main__list-scientist">
+                    <li class="main__item-scientist">
+                      <input
+                        type="text"
+                        name="fullNameScientist"
+                        class="main__input"
+                        placeholder="Ф.И.О."
+                        aria-label="Ф.И.О."
+                      />
+                      <input
+                        type="text"
+                        name="positionScientist"
+                        class="main__input"
+                        placeholder="Должность"
+                        aria-label="Должность"
+                      />
+                    </li>
+                    <li class="main__item-scientist">
+                      <input
+                        type="text"
+                        class="main__input"
+                        name="scientificDegree"
+                        placeholder="Научная степень"
+                        aria-label="Научная степень"
+                      />
+                    </li>
+                  </ul>
+                </li>
+                <li class="main__item additional-files hidden" id="additional">
+                  <ul class="main__list-plan">
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">Реферат</h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="report"
+                            name="file[]"
+                            multiple
+                            aria-label="Реферат"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul id="report-files" class="input-file-list"></u>
+                    </li>
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">
+                          Индивидуальный план научной деятельности по
+                          годам/семестрам
+                        </h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="individualPlan"
+                            name="file[]"
+                            multiple
+                            aria-label="Индивидуальный план научной деятельности"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul
+                        id="individualPlan-files"
+                        class="input-file-list"
+                      ></ul>
+                    </li>
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">
+                          План научной деятельности по годам
+                        </h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="annualPlan"
+                            name="file[]"
+                            multiple
+                            aria-label="План научной деятельности по годам"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul id="annualPlan-files" class="input-file-list"></ul>
+                    </li>
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">
+                          Отзыв научного руководителя
+                        </h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="supervisorReview"
+                            name="file[]"
+                            multiple
+                            aria-label="Отзыв научного руководителя"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul
+                        id="supervisorReview-files"
+                        class="input-file-list"
+                      ></ul>
+                    </li>
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">
+                          Выписка из протокола семинара
+                        </h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="seminarProtocol"
+                            name="file[]"
+                            multiple
+                            aria-label="Выписка из протокола семинара"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul
+                        id="seminarProtocol-files"
+                        class="input-file-list"
+                      ></ul>
+                    </li>
+                    <li class="main__item-plan">
+                      <div class="inner-title">
+                        <h3 class="main__subtitle">
+                          Протокол отчета на Ученом совете
+                        </h3>
+                        <label class="input-file">
+                          <input
+                            type="file"
+                            id="councilReport"
+                            name="file[]"
+                            multiple
+                            aria-label="Протокол отчета на Ученом совете"
+                          />
+                          <span>Выбрать файл</span>
+                        </label>
+                      </div>
+                      <ul id="councilReport-files" class="input-file-list"></u>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </form>
+
+
+        </section>
+        <section class="main main-container achievement">
+          <form
+          action="#!"
+          method="post"
+          enctype="multipart/form-data"
+          class="main__form achievement"
+        >
+          <h2 class="main__title achievement__title">
+            Индивидуальные достижения
+          </h2>
+          <h3 class="achievement__heding">Публикации</h3>
+          <ul class="achievement__list-input">
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">Материалы конференций</h3>
+
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="materialConf"
+                  name="materialConf"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="materialConf" class="input-file-list"></ul>
+            </li>
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">Тезисы докладов</h3>
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="thesisReport"
+                  name="thesisReport"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="thesisReport" class="input-file-list"></ul>
+            </li>
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">Статьи</h3>
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="article"
+                  name="article"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="article" class="input-file-list"></ul>
+            </li>
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">РИД</h3>
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="pid"
+                  name="pid"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="pid" class="input-file-list"></ul>
+            </li>
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">Другое</h3>
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="another"
+                  name="another"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="another" class="input-file-list"></ul>
+            </li>
+            <li class="achievement-item__input">
+              <h3 class="achievement__subtitle">Отчет аспиранта</h3>
+              <label class="input-file">
+                <input
+                  type="file"
+                  id="reportStudent"
+                  name="reportStudent"
+                  multiple
+                  aria-label="Выбрать файл"
+                />
+                <span>Выбрать файл</span>
+              </label>
+              <ul id="reportStudent" class="input-file-list"></ul>
+            </li>
+          </ul>
+        </form>
+        </section>
+        <section class="main main-container exam">
+          <form
+          action="#!"
+          method="post"
+          enctype="multipart/form-data"
+          class="main__form exam"
+        >
+        <h2 class="main__title achievement__title">
+          Экзаменационная ведомость
+        </h2></form>
         </section>
       </main>
     </div>
@@ -525,18 +638,21 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script defer src="js/script.js"></script>
     <script>
-      const dateInput = document.getElementById("date-input");
-      const datePlaceholder = document.querySelector(".date-placeholder");
+      // const dateInput = document.getElementById("date-input");
+      // const datePlaceholder = document.querySelector(".date-placeholder");
 
-      dateInput.addEventListener("input", function () {
-        if (dateInput.value) {
-          datePlaceholder.style.opacity = "0";
-          datePlaceholder.style.visibility = "hidden";
-        } else {
-          datePlaceholder.style.opacity = "1";
-          datePlaceholder.style.visibility = "visible";
-        }
-      });
+      // dateInput.addEventListener("input", function () {
+      //   if (dateInput.value) {
+      //     datePlaceholder.style.opacity = "0";
+      //     datePlaceholder.style.visibility = "hidden";
+      //   } else {
+      //     datePlaceholder.style.opacity = "1";
+      //     datePlaceholder.style.visibility = "visible";
+      //     document.getElementById;
+      //   }
+      // });
+
+
     </script>
   </body>
 </html>

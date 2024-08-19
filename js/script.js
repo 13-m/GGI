@@ -7,21 +7,23 @@ const sectionAbit = document.getElementById("abit");
 const sectionDiploma = document.getElementById("diplomSec");
 const sectionScientist = document.getElementById("scientist");
 const sectionAdditional = document.getElementById("additional");
+const navList = document.getElementById("examLink");
 
 function curSelect() {
   if (option1.checked) {
-    console.log("Current select: Абитуриент");
+    // console.log("Current select: Абитуриент");
     sectionAbit.classList.toggle("hidden");
     sectionDiploma.classList.toggle("hidden");
     sectionScientist.classList.toggle("hidden");
     sectionAdditional.classList.toggle("hidden");
+    navList.classList.toggle("hidden");
   } else if (option2.checked) {
+    // console.log("Current select: Аспирант");
     sectionAbit.classList.toggle("hidden");
     sectionDiploma.classList.toggle("hidden");
     sectionScientist.classList.toggle("hidden");
     sectionAdditional.classList.toggle("hidden");
-
-    console.log("Current select: Аспирант");
+    navList.classList.toggle("hidden");
   }
 }
 option1.addEventListener("change", curSelect);
@@ -69,20 +71,37 @@ document.querySelectorAll(".input-file input[type=file]").forEach((input) => {
 
     Array.from(this.files).forEach((file) => {
       if (!existingFiles.includes(file.name)) {
-        let fileItem = document.createElement("div");
+        let fileItem = document.createElement("li");
         fileItem.classList.add("input-file-list-item");
 
         let fileName = document.createElement("span");
         fileName.classList.add("input-file-list-name");
         fileName.textContent = file.name;
 
+        let btn = this.parentNode.querySelector("span");
+        btn.classList.add("btn-more");
+        btn.textContent = "+ Добавить ещё";
+
+        // let list = document.querySelector(".input-file-list");
+        let list = this.parentNode.nextElementSibling;
+        console.log(
+          this.parentNode.nextElementSibling,
+          "this.parenNode.nextElementSibling"
+        );
+        console.log(this.parentNode, "this.parenNode");
+
         let removeLink = document.createElement("a");
         removeLink.href = "#";
         removeLink.textContent = "x";
         removeLink.classList.add("input-file-list-remove");
+
         removeLink.addEventListener("click", (e) => {
           e.preventDefault();
           removeFilesItem(file.name, this);
+          if (list.querySelectorAll(".input-file-list-item").length === 0) {
+            btn.classList.remove("btn-more");
+            btn.textContent = "Выбрать файл";
+          }
         });
 
         let fileSvg = document.createElement("div");
@@ -137,4 +156,35 @@ document.getElementById("file-input").addEventListener("change", (event) => {
     };
     reader.readAsDataURL(file);
   }
+});
+
+// sidebar
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav__link");
+
+  const forms = document.querySelectorAll(".main-container");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("Сейчас");
+      const navItems = this.parentNode;
+      console.log(navItems);
+
+      navLinks.forEach((navLink) =>
+        navLink.parentNode.classList.remove("active")
+      );
+
+      this.parentNode.classList.add("active");
+      const target = this.getAttribute("data-target");
+
+      forms.forEach((form) => form.classList.remove("active"));
+
+      const activeForm = document.querySelector(`.main-container.${target}`);
+      if (activeForm) {
+        activeForm.classList.add("active");
+      }
+    });
+  });
 });

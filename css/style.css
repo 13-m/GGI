@@ -286,6 +286,27 @@ body {
   width: 80%;
 }
 
+/* Temp style */
+.main {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.main.active {
+  display: block;
+  opacity: 1;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  cursor: pointer;
+}
+/* end Temp style */
+
 .wrapp-title {
   display: flex;
   flex-direction: row;
@@ -564,7 +585,16 @@ body {
   display: none;
 }
 
+span.btn-more {
+  font-weight: 600;
+  color: #008df2;
+  background-color: #f3f3f3;
+}
+
 .input-file-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main__list-diploma {
@@ -646,4 +676,72 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.achievement {
+}
+
+.main__title {
+}
+
+.achievement__title {
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.achievement__heding {
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.achievement__list-input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.achievement-item__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 47px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.achievement-item__input:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.achievement__subtitle {
+  width: 50%;
+  margin: 0;
+  font-weight: 500;
+  color: #363434;
+  font-size: 26px;
+}
+
+.achievement .input-file {
+  width: 50%;
+}
+
+.achievement .input-file {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-file {
+}
+
+.achievement .input-file-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-file-list {
 }
