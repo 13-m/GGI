@@ -111,7 +111,6 @@
                     />
                   </svg>
                 </div>
-
                 <p class="nav__text">Экзаменационная ведомость</p>
               </a>
             </li>
@@ -240,13 +239,13 @@
                 <h3 class="main__subtitle">Основная информация</h3>
                 <ul class="main__list-mainInfo">
                   <li class="main__item-mainInfo">
-                    <input
-                      type="date"
-                      class="main__input"
-                      name="birthDate"
-                      placeholder="Ч.М.Д. Рождения"
-                      aria-label="Дата рождения"
-                    />
+                    <label for="input" class="main__label main__input">
+                      <input class="main__input-date" type="date" id="input" />
+                      <span class="label-placeholder"
+                        >Дата рождения<span class="label-span"></span
+                      ></span>
+                    </label>
+
                     <input
                       type="text"
                       class="main__input"
@@ -524,57 +523,20 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
-
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <script>
-      const option1 = document.getElementById("option1");
-      const option2 = document.getElementById("option2");
-      const sectionAbit = document.getElementById("abit");
-      const sectionDiploma = document.getElementById("diplomSec");
-      const sectionScientist = document.getElementById("scientist");
-      const sectionAdditional = document.getElementById("additional");
+      const dateInput = document.getElementById("date-input");
+      const datePlaceholder = document.querySelector(".date-placeholder");
 
-      function curSelect() {
-        if (option1.checked) {
-          console.log("Current select: Абитуриент");
-          sectionAbit.classList.toggle("hidden");
-          sectionDiploma.classList.toggle("hidden");
-          sectionScientist.classList.toggle("hidden");
-          sectionAdditional.classList.toggle("hidden");
-        } else if (option2.checked) {
-          sectionAbit.classList.toggle("hidden");
-          sectionDiploma.classList.toggle("hidden");
-          sectionScientist.classList.toggle("hidden");
-          sectionAdditional.classList.toggle("hidden");
-
-          console.log("Current select: Аспирант");
+      dateInput.addEventListener("input", function () {
+        if (dateInput.value) {
+          datePlaceholder.style.opacity = "0";
+          datePlaceholder.style.visibility = "hidden";
+        } else {
+          datePlaceholder.style.opacity = "1";
+          datePlaceholder.style.visibility = "visible";
         }
-      }
-      option1.addEventListener("change", curSelect);
-      option2.addEventListener("change", curSelect);
-
-      const select = document.getElementById("date-select");
-      for (let year = 2024; year >= 1910; year--) {
-        const option = document.createElement("option");
-        option.value = year;
-        option.text = year;
-        select.appendChild(option);
-      }
-
-      const choices = new Choices(select, {
-        searchEnabled: false,
-        itemSelectText: "",
-        sorter: function (a, b) {
-          return b.label.length - a.label.length;
-        },
       });
-
-      for (let year = 1920; year <= 2025; year++) {
-        let option = document.createElement("option");
-        option.value = year;
-        option.innerHTML = year;
-        document.getElementById("date-select").appendChild(options);
-      }
     </script>
   </body>
 </html>

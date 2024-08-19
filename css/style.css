@@ -442,6 +442,8 @@ body {
 
 .main__item-mainInfo:nth-child(1) .main__input:nth-child(1) {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .main__item-mainInfo:nth-child(1) .main__input:nth-child(2) {
@@ -453,16 +455,66 @@ body {
 }
 
 .main__input {
+  max-height: 50px;
   padding: 14px 20px;
   color: #5b5b5b;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #959595;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__label {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 56px;
+}
+
+.main__input-date {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  line-height: 13px;
+  outline: none;
+  color: transparent;
+  transition: color 0.3s ease;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.main__input-date:active,
+.main__input-date:focus {
+  color: #000;
+}
+
+.label-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 16px;
+  color: #848484;
+  pointer-events: none;
+  transition: top 0.3s ease, bottom 0.3s ease, font-size 0.3s ease;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.main__input-date:focus + .label-placeholder {
+  top: 10px;
+  left: 20px;
+  font-size: 12px;
+}
+
+.main__input-date::placeholder {
+  color: transparent;
 }
 
 .mainInfo {
   padding: 45px 50px;
-  background-color: #00000017;
+  background-color: #f3f3f3;
   border-radius: 10px;
   margin-bottom: 60px;
 }
@@ -544,7 +596,7 @@ body {
 }
 
 .name-scientist {
-  background-color: #00000017;
+  background-color: #f3f3f3;
   border-radius: 10px;
   padding: 45px 50px 50px;
 }
