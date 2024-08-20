@@ -132,7 +132,10 @@
   }
 
   .achievement__subtitle {
-    font-size: 25px;
+    font-size: 23px;
+  }
+
+  .input-file span {
   }
 }
 
