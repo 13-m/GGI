@@ -120,4 +120,31 @@
   .nav__text {
     margin: 0;
   }
+
+  .main__title {
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+
+  .achievement__heding {
+    font-size: 25px;
+  }
+
+  .achievement__subtitle {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-item__input {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 25px 0;
+  }
+
+  .achievement .input-file-list {
+    flex-direction: column;
+  }
 }

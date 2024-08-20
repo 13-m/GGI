@@ -8,6 +8,8 @@ const sectionDiploma = document.getElementById("diplomSec");
 const sectionScientist = document.getElementById("scientist");
 const sectionAdditional = document.getElementById("additional");
 const navList = document.getElementById("examLink");
+const appForm = document.getElementById("appForm"); // абитуриент
+const pgForm = document.getElementById("pgForm"); // аспирант
 
 function curSelect() {
   if (option1.checked) {
@@ -17,6 +19,8 @@ function curSelect() {
     sectionScientist.classList.toggle("hidden");
     sectionAdditional.classList.toggle("hidden");
     navList.classList.toggle("hidden");
+    appForm.classList.remove("hidden");
+    pgForm.classList.add("hidden");
   } else if (option2.checked) {
     // console.log("Current select: Аспирант");
     sectionAbit.classList.toggle("hidden");
@@ -24,6 +28,8 @@ function curSelect() {
     sectionScientist.classList.toggle("hidden");
     sectionAdditional.classList.toggle("hidden");
     navList.classList.toggle("hidden");
+    appForm.classList.add("hidden");
+    pgForm.classList.remove("hidden");
   }
 }
 option1.addEventListener("change", curSelect);

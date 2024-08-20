@@ -482,7 +482,7 @@ body {
   background-color: #fff;
   border: 1px solid #959595;
   border-radius: 10px;
-  cursor: pointer;
+  cursor: text;
 }
 
 .main__label {
@@ -595,6 +595,15 @@ span.btn-more {
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 15px;
+}
+
+.main__item-plan .input-file-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main__list-diploma {
@@ -670,12 +679,23 @@ span.btn-more {
   justify-content: space-between;
 }
 
+.main__item-plan .main__subtitle {
+  width: 75%;
+}
+
+.main__item-plan .input-file {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .inner-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .achievement {
@@ -708,6 +728,7 @@ span.btn-more {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 47px 0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -717,7 +738,7 @@ span.btn-more {
 }
 
 .achievement__subtitle {
-  width: 50%;
+  width: max-content;
   margin: 0;
   font-weight: 500;
   color: #363434;
@@ -725,7 +746,7 @@ span.btn-more {
 }
 
 .achievement .input-file {
-  width: 50%;
+  width: max-content;
 }
 
 .achievement .input-file {
@@ -734,14 +755,13 @@ span.btn-more {
 }
 
 .input-file {
+  width: max-content;
 }
 
 .achievement .input-file-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.input-file-list {
 }
