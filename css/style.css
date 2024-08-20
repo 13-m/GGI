@@ -272,10 +272,11 @@ body {
 
 .main {
   padding: 70px 100px;
+  padding-right: 320px;
 }
 
 .main__form {
-  width: 80%;
+  width: 100%;
 }
 
 /* Temp style */
