@@ -7,24 +7,11 @@
 }
 
 body {
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-family: "TT Firs Neue", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
   color: #363434;
   border-top: 2px solid #00adef;
 }
-/* TT Firs Neue:
-- light
-- regular
-- bold
-- medium
- */
-/* Manrope :
-- extrabold
-- medium
-- bold
-- semibold
-- regular
-*/
 
 .container {
   display: flex;
@@ -68,6 +55,7 @@ body {
 }
 
 .sidebar__desc {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
   max-width: 200px;
   margin: 0;
   font-size: 11px;
@@ -122,6 +110,9 @@ body {
 .nav__item.active .nav__text {
   color: #fff;
 }
+.nav__item:nth-child(1).active {
+  background-color: inherit;
+}
 
 .logo {
   margin-bottom: 30px;
@@ -174,7 +165,7 @@ body {
   color: #363434;
 }
 
-.nav__link {
+.logo__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,14 +173,23 @@ body {
   width: max-content;
   text-decoration: none;
   color: #363434;
-  font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav__link {
-  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  color: #363434;
+  font-weight: 500;
+  transition: color 0.3s ease;
   text-decoration: none;
+}
+
+.nav__link {
   transition: background-color 0.1s ease, color 0.1s ease;
 }
 
@@ -232,24 +232,11 @@ body {
 }
 
 .header {
-  position: relative;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   padding: 35px 50px;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  width: 102%;
-  height: 1px;
-  display: block;
-  bottom: 0;
-  left: -2%;
-  /* border: 1px solid red; */
-  background-color: #e0e0e0;
-  z-index: 100000;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .header__btn {
@@ -264,6 +251,7 @@ body {
   border: 1px solid #c5c5c5;
   border-radius: 10px;
   cursor: pointer;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 
 .header__btn img {
@@ -277,8 +265,12 @@ body {
   border-radius: 50%;
 }
 
+.body-container {
+  overflow: hidden auto;
+  max-width: 100%;
+}
+
 .main {
-  overflow-y: scroll;
   padding: 70px 100px;
 }
 
@@ -291,10 +283,11 @@ body {
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease;
+  width: 100%;
 }
 
 .main.active {
-  display: block;
+  display: flex;
   opacity: 1;
 }
 
@@ -359,6 +352,7 @@ body {
   border: 5px solid #fff;
   background: url("../img/plus-icon.svg") no-repeat center center / 10px,
     #008df2;
+  pointer-events: none;
 }
 
 .image-preview {
@@ -476,6 +470,7 @@ body {
 }
 
 .main__input {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
   max-height: 50px;
   padding: 14px 20px;
   color: #5b5b5b;
@@ -604,6 +599,10 @@ span.btn-more {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.achievement__list-input .input-file-list {
+  width: 100%;
 }
 
 .main__list-diploma {

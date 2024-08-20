@@ -60,6 +60,7 @@ for (let year = 1920; year <= 2025; year++) {
 
 // end toggle
 
+// files
 const max_files = 10;
 document.querySelectorAll(".input-file input[type=file]").forEach((input) => {
   input.addEventListener("change", function () {
@@ -174,9 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      console.log("Сейчас");
       const navItems = this.parentNode;
-      console.log(navItems);
 
       navLinks.forEach((navLink) =>
         navLink.parentNode.classList.remove("active")

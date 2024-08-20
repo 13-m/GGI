@@ -86,12 +86,15 @@
   }
 }
 @media (max-width: 568px) {
+  .logo {
+    margin-bottom: 0;
+  }
   .main__form {
     padding-left: 15px;
   }
   .sidebar,
   .nav {
-    width: 70px;
+    width: 50px;
   }
 
   .mainInfo {
@@ -106,7 +109,16 @@
 
   .wrapp-svg,
   .nav__img {
-    width: 40px;
+    width: 30px;
+  }
+
+  .nav-svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .main__form {
+    width: 100%;
   }
 
   .main-container {
@@ -114,7 +126,11 @@
   }
 
   .nav__item {
-    padding: 5px 10px;
+    padding: 13px 10px;
+  }
+
+  .nav__link {
+    gap: 10px;
   }
 
   .nav__text {
@@ -136,6 +152,19 @@
   }
 
   .input-file span {
+  }
+
+  .main__item-scientist {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main__item-scientist:nth-child(1) .main__input {
+    width: 100%;
+  }
+
+  .main__item-plan {
+    padding: 20px 0;
   }
 }
 

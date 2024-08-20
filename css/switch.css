@@ -23,7 +23,8 @@
   user-select: none;
 }
 
-.switch-option span {
+.switch-text {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
   display: block;
   padding: 5px 35px;
 }
