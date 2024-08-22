@@ -193,3 +193,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// exit
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnLogOut = document.getElementById("logOut");
+  const popup = document.getElementById("popup");
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+
+  btnLogOut.addEventListener("click", () => {
+    setTimeout(() => {
+      popup.classList.add("visible");
+    }, 10);
+  });
+
+  yesBtn.addEventListener("click", () => {
+    alert("Вы вышли из аккаунта");
+    popup.classList.remove("visible");
+  });
+
+  noBtn.addEventListener("click", () => {
+    alert("Вы не вышли из аккаунта");
+    popup.classList.remove("visible");
+  });
+});

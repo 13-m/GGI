@@ -1,0 +1,326 @@
+@import url("./fonts.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  color: #363434;
+  border-top: 2px solid #00adef;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/fon-login-img.png") no-repeat center center / cover,
+    hsl(0, 0%, 29%);
+}
+
+.container {
+}
+
+.auth__logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.auth__wrapp-img {
+  position: relative;
+}
+
+.auth__wrapp-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50%;
+  transform: scale(1.5);
+  height: 100%;
+  background: radial-gradient(circle, #00adef 0%, rgba(0, 0, 255, 0) 60%),
+    linear-gradient(180deg, #00adef 0%, rgba(0, 0, 255, 0) 100%);
+  filter: blur(14px);
+  z-index: 1;
+}
+
+.auth__img {
+}
+
+.auth__wrapp-title {
+  width: min-content;
+}
+
+.auth__title-logo {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 17px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.auth__desc {
+  margin: 0;
+  color: #fff;
+  font-family: "TT Firs Neue", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.auth__container {
+  padding: 70px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__container.reverse {
+  flex-direction: column-reverse;
+}
+
+.auth__form {
+  overflow: hidden;
+}
+
+.form__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity 0.5s ease, visibility 0.5s linear 1s, height 0.8s ease;
+}
+
+.form__content.active {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s, 0s;
+}
+
+.auth__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "TT Firs Neue", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.auth__list {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth__item {
+  background-color: #fff;
+}
+
+.auth__label {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 13px 20px;
+  border: 1px solid #c5c5c5;
+}
+
+.bd span {
+  position: absolute;
+}
+
+.bd {
+  display: flex;
+  width: 100%;
+}
+
+.bd:focus {
+  border: 10px solid red;
+}
+
+.auth__input:focus + span,
+.auth__input:hover + span,
+.auth__input:active + span {
+  color: transparent;
+}
+
+.auth__input:focus + span,
+.auth__input:hover + span,
+.auth__input:active + span {
+  visibility: hidden;
+}
+
+.auth__input:focus,
+.auth__input:hover,
+.auth__input:active {
+  color: #000;
+}
+
+.bd input {
+  width: 100%;
+}
+.bd input {
+  color: transparent;
+}
+
+.auth__input {
+  border: none;
+  background-color: transparent;
+  color: #5b5b5b;
+}
+
+.auth__input:focus {
+  outline: none;
+}
+
+.auth__input::placeholder {
+  color: #5b5b5b;
+}
+
+.auth__span {
+}
+
+.auth__inner {
+  margin-bottom: 23px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.auth__label-checkbox {
+  font-size: 13px;
+}
+
+.auth__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.auth__checkbox + .auth__label-checkbox {
+  display: flex;
+  gap: 0.8em;
+  padding: 0 6px;
+  align-items: center;
+  user-select: none;
+}
+.auth__checkbox + .auth__label-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  outline: 1px solid #c5c5c5;
+  outline-offset: 4px;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  transition: background-color 0.2s ease;
+}
+.auth__checkbox:checked + .auth__label-checkbox::before {
+  background: #29b3ff;
+}
+
+.auth__checkbox:not(:disabled):active + .auth__label-checkbox::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+.auth__checkbox:focus + .auth__label-checkbox::before {
+  /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+}
+.auth__checkbox:focus:not(:checked) + .auth__label-checkbox::before {
+  border-color: #80bdff;
+}
+.auth__checkbox:disabled + .auth__label-checkbox::before {
+  background-color: #e9ecef;
+}
+
+.auth__recovery {
+  font-size: 13px;
+  color: #008df2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth__wrapp-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__btn {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.auth__btn:first-child {
+  margin-bottom: 5px;
+  background-color: #008df2;
+  color: #fff;
+}
+
+.auth__btn:last-child {
+  background-color: transparent;
+  color: #008df2;
+}
+
+.logIn-btn {
+}
+
+.create-btn {
+}
+
+@media (max-width: 1401px) {
+  .auth {
+    padding: 40px;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 890px) {
+  .auth {
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .auth__container {
+    padding: 30px;
+  }
+
+  .auth__title {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .auth__logo {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}

@@ -34,9 +34,9 @@
                   />
                 </div>
                 <div class="sidebar__wrapp-title">
-                  <h1 class="sidebar__title">
+                  <h2 class="sidebar__title">
                     Государственный гидрологический институт
-                  </h1>
+                  </h2>
                   <p class="sidebar__desc">
                     Федеральное&nbsp;государственное бюджетное&nbsp;учреждение
                   </p>
@@ -124,6 +124,15 @@
       </aside>
       <main class="main-content">
         <section class="header main-container">
+          <div id="popup" class="popup">
+            <div class="popup__content">
+              <p class="popup__text">Вы действительно хотите выйти?</p>
+              <div class="popup__btns">
+                <button class="popup__btn" id="yesBtn">Да</button>
+                <button class="popup__btn" id="noBtn">Нет</button>
+              </div>
+            </div>
+          </div>
           <button class="header__btn user-btn">
             <img src="./img/user-img.png" alt="аватарка пользователя" />Алексей
           </button>
@@ -141,7 +150,7 @@
               />
             </svg>
           </button>
-          <button class="header__btn exit-btn">
+          <button id="logOut" class="header__btn exit-btn">
             <svg
               width="21"
               height="21"
@@ -277,7 +286,21 @@
                 <li class="main__item document-uploads abit" id="abit">
                   <ul class="main__list-files grid-container">
                     <li class="main__item-files first-item">
-                      <h3 class="main__subtitle">Диплом</h3>
+                      <h3 class="main__subtitle">
+                        Диплом
+                        <div class="tooltip-icon hidden">
+                          <div class="tooltip__container">
+                            <div class="tooltip__status">
+                              <p class="toolltip__name">Иванов И.И</p>
+                              <p class="tooltip__date">12.12.2024</p>
+                              <p class="tooltip__time">9:31</p>
+                            </div>
+                            <p class="tooltip__alert">
+                              Измените название файла
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
                       <label class="input-file">
                         <input
                           type="file"
@@ -291,7 +314,21 @@
                       <ul id="passport-files" class="input-file-list"></ul>
                     </li>
                     <li class="main__item-files second-item">
-                      <h3 class="main__subtitle">Реферат</h3>
+                      <h3 class="main__subtitle">
+                        Реферат
+                        <div class="tooltip-icon hidden">
+                          <div class="tooltip__container">
+                            <div class="tooltip__status">
+                              <p class="toolltip__name">Иванов И.И</p>
+                              <p class="tooltip__date">12.12.2024</p>
+                              <p class="tooltip__time">9:31</p>
+                            </div>
+                            <p class="tooltip__alert">
+                              Измените название файла
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
                       <label class="input-file">
                         <input
                           type="file"
@@ -309,7 +346,21 @@
                 <li class="main__item document-uploads">
                   <ul class="main__list-files grid-container">
                     <li class="main__item-files first-item">
-                      <h3 class="main__subtitle">Паспорт</h3>
+                      <h3 class="main__subtitle">
+                        Паспорт
+                        <div class="tooltip-icon hidden">
+                          <div class="tooltip__container">
+                            <div class="tooltip__status">
+                              <p class="toolltip__name">Иванов И.И</p>
+                              <p class="tooltip__date">12.12.2024</p>
+                              <p class="tooltip__time">9:31</p>
+                            </div>
+                            <p class="tooltip__alert">
+                              Измените название файла
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
                       <label class="input-file">
                         <input
                           type="file"
@@ -323,7 +374,21 @@
                       <ul id="passport-files" class="input-file-list"></ul>
                     </li>
                     <li class="main__item-files second-item">
-                      <h3 class="main__subtitle">СНИЛС</h3>
+                      <h3 class="main__subtitle">
+                        СНИЛС
+                        <div class="tooltip-icon hidden">
+                          <div class="tooltip__container">
+                            <div class="tooltip__status">
+                              <p class="toolltip__name">Иванов И.И</p>
+                              <p class="tooltip__date">12.12.2024</p>
+                              <p class="tooltip__time">9:31</p>
+                            </div>
+                            <p class="tooltip__alert">
+                              Измените название файла
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
                       <label class="input-file">
                         <input
                           type="file"
@@ -337,7 +402,21 @@
                       <ul id="snils-files" class="input-file-list"></ul>
                     </li>
                     <li class="main__item-files third-item">
-                      <h3 class="main__subtitle">ИНН</h3>
+                      <h3 class="main__subtitle">
+                        ИНН
+                        <div class="tooltip-icon hidden">
+                          <div class="tooltip__container">
+                            <div class="tooltip__status">
+                              <p class="toolltip__name">Иванов И.И</p>
+                              <p class="tooltip__date">12.12.2024</p>
+                              <p class="tooltip__time">9:31</p>
+                            </div>
+                            <p class="tooltip__alert">
+                              Измените название файла
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
                       <label class="input-file">
                         <input
                           type="file"
@@ -411,7 +490,21 @@
                   <ul class="main__list-plan">
                     <li class="main__item-plan">
                       <div class="inner-title">
-                        <h3 class="main__subtitle">Реферат</h3>
+                        <h3 class="main__subtitle">
+                          Реферат
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
+                        </h3>
                         <label class="input-file">
                           <input
                             type="file"
@@ -430,6 +523,18 @@
                         <h3 class="main__subtitle">
                           Индивидуальный план научной деятельности по
                           годам/семестрам
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
                         </h3>
                         <label class="input-file">
                           <input
@@ -451,6 +556,18 @@
                       <div class="inner-title">
                         <h3 class="main__subtitle">
                           План научной деятельности по годам
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
                         </h3>
                         <label class="input-file">
                           <input
@@ -469,6 +586,18 @@
                       <div class="inner-title">
                         <h3 class="main__subtitle">
                           Отзыв научного руководителя
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
                         </h3>
                         <label class="input-file">
                           <input
@@ -490,6 +619,18 @@
                       <div class="inner-title">
                         <h3 class="main__subtitle">
                           Выписка из протокола семинара
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
                         </h3>
                         <label class="input-file">
                           <input
@@ -511,6 +652,18 @@
                       <div class="inner-title">
                         <h3 class="main__subtitle">
                           Протокол отчета на Ученом совете
+                          <div class="tooltip-icon hidden">
+                            <div class="tooltip__container">
+                              <div class="tooltip__status">
+                                <p class="toolltip__name">Иванов И.И</p>
+                                <p class="tooltip__date">12.12.2024</p>
+                                <p class="tooltip__time">9:31</p>
+                              </div>
+                              <p class="tooltip__alert">
+                                Измените название файла
+                              </p>
+                            </div>
+                          </div>
                         </h3>
                         <label class="input-file">
                           <input
@@ -548,18 +701,17 @@
                 <ul class="achievement__list-input">
                   <li class="achievement-item__input">
                     <h3 class="achievement__subtitle">
-                      Диплом<span class="tooltip-icon">
-                        <span class="tooltip__container"
-                          ><div class="tooltip__status">
+                      Диплом
+                      <div class="tooltip-icon hidden">
+                        <div class="tooltip__container">
+                          <div class="tooltip__status">
                             <p class="toolltip__name">Иванов И.И</p>
                             <p class="tooltip__date">12.12.2024</p>
                             <p class="tooltip__time">9:31</p>
                           </div>
-                          <p class="tooltip__alert">
-                            Измените название файла
-                          </p></span
-                        >
-                      </span>
+                          <p class="tooltip__alert">Измените название файла</p>
+                        </div>
+                      </div>
                     </h3>
                     <label class="input-file">
                       <input
@@ -574,7 +726,19 @@
                     <ul id="diplomaApp-files" class="input-file-list"></ul>
                   </li>
                   <li class="achievement-item__input">
-                    <h3 class="achievement__subtitle">Реферат</h3>
+                    <h3 class="achievement__subtitle">
+                      Реферат
+                      <div class="tooltip-icon hidden">
+                        <div class="tooltip__container">
+                          <div class="tooltip__status">
+                            <p class="toolltip__name">Иванов И.И</p>
+                            <p class="tooltip__date">12.12.2024</p>
+                            <p class="tooltip__time">9:31</p>
+                          </div>
+                          <p class="tooltip__alert">Измените название файла</p>
+                        </div>
+                      </div>
+                    </h3>
                     <label class="input-file">
                       <input
                         type="file"
@@ -588,7 +752,19 @@
                     <ul id="reportApp-files" class="input-file-list"></ul>
                   </li>
                   <li class="achievement-item__input">
-                    <h3 class="achievement__subtitle">Другое</h3>
+                    <h3 class="achievement__subtitle">
+                      Другое
+                      <div class="tooltip-icon hidden">
+                        <div class="tooltip__container">
+                          <div class="tooltip__status">
+                            <p class="toolltip__name">Иванов И.И</p>
+                            <p class="tooltip__date">12.12.2024</p>
+                            <p class="tooltip__time">9:31</p>
+                          </div>
+                          <p class="tooltip__alert">Измените название файла</p>
+                        </div>
+                      </div>
+                    </h3>
                     <label class="input-file">
                       <input
                         type="file"
@@ -707,7 +883,19 @@
               <h3 class="achievement__heding">Загрузите свои документы</h3>
               <ul class="achievement__list-input">
                 <li class="achievement-item__input">
-                  <h3 class="achievement__subtitle">Философия</h3>
+                  <h3 class="achievement__subtitle">
+                    Философия
+                    <div class="tooltip-icon hidden">
+                      <div class="tooltip__container">
+                        <div class="tooltip__status">
+                          <p class="toolltip__name">Иванов И.И</p>
+                          <p class="tooltip__date">12.12.2024</p>
+                          <p class="tooltip__time">9:31</p>
+                        </div>
+                        <p class="tooltip__alert">Измените название файла</p>
+                      </div>
+                    </div>
+                  </h3>
                   <label class="input-file">
                     <input
                       type="file"
@@ -721,7 +909,19 @@
                   <ul id="materialConf" class="input-file-list"></ul>
                 </li>
                 <li class="achievement-item__input">
-                  <h3 class="achievement__subtitle">Английский язык</h3>
+                  <h3 class="achievement__subtitle">
+                    Английский язык
+                    <div class="tooltip-icon hidden">
+                      <div class="tooltip__container">
+                        <div class="tooltip__status">
+                          <p class="toolltip__name">Иванов И.И</p>
+                          <p class="tooltip__date">12.12.2024</p>
+                          <p class="tooltip__time">9:31</p>
+                        </div>
+                        <p class="tooltip__alert">Измените название файла</p>
+                      </div>
+                    </div>
+                  </h3>
                   <label class="input-file">
                     <input
                       type="file"
@@ -735,7 +935,19 @@
                   <ul id="thesisReport" class="input-file-list"></ul>
                 </li>
                 <li class="achievement-item__input">
-                  <h3 class="achievement__subtitle">Специальность</h3>
+                  <h3 class="achievement__subtitle">
+                    Специальность
+                    <div class="tooltip-icon hidden">
+                      <div class="tooltip__container">
+                        <div class="tooltip__status">
+                          <p class="toolltip__name">Иванов И.И</p>
+                          <p class="tooltip__date">12.12.2024</p>
+                          <p class="tooltip__time">9:31</p>
+                        </div>
+                        <p class="tooltip__alert">Измените название файла</p>
+                      </div>
+                    </div>
+                  </h3>
                   <label class="input-file">
                     <input
                       type="file"

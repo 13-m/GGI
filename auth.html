@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo-img-1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <title>ГГИ</title>
+  </head>
+  <body>
+    <main>
+      <section class="auth">
+        <div class="auth__logo">
+          <div class="auth__wrapp-img">
+            <img
+              src="img/logo-img-1.png"
+              alt="Логотип Государственного гидрологического института"
+              class="auth__img"
+            />
+          </div>
+          <div class="auth__wrapp-title">
+            <h2 class="auth__title-logo">
+              Государственный гидрологический институт
+            </h2>
+            <p class="auth__desc">
+              Федеральное&nbsp;государственное бюджетное&nbsp;учреждение
+            </p>
+          </div>
+        </div>
+        <div class="container auth__container">
+          <form
+            id="formLogIn"
+            action="#!"
+            method="post"
+            class="auth__form logIn"
+          >
+            <div id="showLogIn" class="form__content">
+              <h2 class="auth__title">Вход</h2>
+              <ul class="auth__list">
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="email"
+                      class="auth__input"
+                      placeholder="Электронная почта"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="password"
+                      class="auth__input"
+                      placeholder="Пароль"
+                      required
+                    />
+                  </label>
+                </li>
+              </ul>
+              <div class="auth__inner">
+                <div class="auth__checkbox-inner">
+                  <input
+                    type="checkbox"
+                    class="auth__checkbox"
+                    id="remember"
+                    name="remember"
+                    value="remember"
+                  />
+                  <label class="auth__label-checkbox" for="remember"
+                    >Запомнить меня</label
+                  >
+                </div>
+                <a href="#!" class="auth__recovery">Восстановить пароль</a>
+              </div>
+              <div class="auth__wrapp-btn">
+                <button class="auth__btn logIn-btn">Войти</button>
+                <button id="changeForm1" class="auth__btn create-btn">
+                  Создать аккаунт
+                </button>
+              </div>
+            </div>
+          </form>
+          <form
+            id="formSignIn"
+            action="#!"
+            method="post"
+            class="auth__form singIn"
+          >
+            <div id="showSingIn" class="form__content active">
+              <h2 class="auth__title">Регистрация в&nbsp;ГГИ</h2>
+              <ul class="auth__list">
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="text"
+                      class="auth__input required"
+                      placeholder="Фамилия *"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="text"
+                      class="auth__input"
+                      placeholder="Имя *"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="text"
+                      class="auth__input"
+                      placeholder="Отчество"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label tabindex="0" class="auth__label bd required">
+                    <input
+                      type="date"
+                      class="auth__input"
+                      placeholder="Дата рождения "
+                      required
+                    />
+                    <span>Дата Рождения *</span>
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="email"
+                      class="auth__input required"
+                      placeholder="Электронная почта *"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="password"
+                      class="auth__input required"
+                      placeholder="Пароль *"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="auth__item">
+                  <label class="auth__label"
+                    ><input
+                      type="password"
+                      class="auth__input required"
+                      placeholder="Повторить пароль *"
+                      required
+                    />
+                  </label>
+                </li>
+              </ul>
+              <div class="auth__inner">
+                <div class="auth__checkbox-inner">
+                  <input
+                    type="checkbox"
+                    class="auth__checkbox"
+                    id="agree"
+                    name="agree"
+                    value="agree"
+                  />
+                  <label class="auth__label-checkbox" for="agree"
+                    >Я&nbsp;даю свое согласие на&nbsp;обработку персональных
+                    данных</label
+                  >
+                </div>
+              </div>
+              <div class="auth__wrapp-btn">
+                <button class="auth__btn logIn-btn">Создать аккаунт</button>
+                <button id="changeForm2" class="auth__btn create-btn">
+                  Войти
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
