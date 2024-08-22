@@ -8,15 +8,18 @@ body {
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
   color: #363434;
+  background-color: #5b5b5b;
+  overflow: hidden;
   border-top: 2px solid #00adef;
 }
 
 .auth {
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 99vh;
   background: url("../img/fon-login-img.png") no-repeat center center / cover,
     hsl(0, 0%, 29%);
 }
@@ -76,6 +79,7 @@ body {
 }
 
 .auth__container {
+  height: 100%;
   padding: 70px;
   background-color: #f3f3f3;
   border-radius: 10px;
@@ -88,7 +92,9 @@ body {
 }
 
 .auth__form {
-  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .form__content {
@@ -147,12 +153,9 @@ body {
 }
 
 .bd {
+  position: relative;
   display: flex;
   width: 100%;
-}
-
-.bd:focus {
-  border: 10px solid red;
 }
 
 .auth__input:focus + span,
@@ -291,6 +294,20 @@ body {
 }
 
 .create-btn {
+}
+
+@media (min-height: 901px) {
+  .auth__container {
+    height: min-content;
+  }
+}
+
+@media (max-height: 900px) {
+  .auth__form {
+    overflow-y: scroll;
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+  }
 }
 
 @media (max-width: 1401px) {
