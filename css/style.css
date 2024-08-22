@@ -78,7 +78,7 @@ body {
 
 .sidebar,
 .nav {
-  width: 360px;
+  width: 380px;
   flex-shrink: 0;
 }
 
@@ -211,7 +211,7 @@ body {
   gap: 10px;
   margin: 0;
   padding: 0;
-  padding: 10px 20px;
+  padding: 10px 30px;
   list-style: none;
 }
 
@@ -606,6 +606,10 @@ span.btn-more {
   width: 100%;
 }
 
+.achievement__list-input .input-file {
+  margin-bottom: 0;
+}
+
 .main__list-diploma {
   margin: 0;
   padding: 0;
@@ -665,6 +669,14 @@ span.btn-more {
 .additional-files {
 }
 
+.additional-files .main__subtitle {
+  margin-bottom: 0;
+}
+
+.additional-files .input-file {
+  margin-bottom: 0;
+}
+
 .main__list-plan {
   margin: 0;
   padding: 0;
@@ -694,7 +706,6 @@ span.btn-more {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 20px;
   flex-wrap: wrap;
 }
 
