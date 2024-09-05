@@ -190,6 +190,7 @@ button {
 }
 
 .auth__input {
+  width: 100%;
   border: none;
   background-color: transparent;
   color: #5b5b5b;
@@ -201,6 +202,10 @@ button {
 
 .auth__input::placeholder {
   color: #5b5b5b;
+}
+
+.visible {
+  visibility: hidden;
 }
 
 .auth__span {
