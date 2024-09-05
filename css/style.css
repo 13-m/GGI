@@ -247,10 +247,8 @@ body {
   gap: 10px;
   font-weight: 700;
   color: #373042;
-  background-color: transparent;
   border: 1px solid #c5c5c5;
   border-radius: 10px;
-  cursor: pointer;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 
