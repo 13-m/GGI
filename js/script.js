@@ -218,3 +218,22 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.remove("visible");
   });
 });
+
+// placeholder - birthDay
+const inputElement = document.getElementById("input");
+const placeholder = document.querySelector(".label-placeholder");
+
+// Function to toggle 'active' class based on input content
+function toggleActiveClass() {
+  if (inputElement.value) {
+    placeholder.classList.add("active");
+    inputElement.classList.add("active");
+  } else {
+    placeholder.classList.remove("active");
+    inputElement.classList.remove("active");
+  }
+}
+
+// Add event listeners for input and change events
+inputElement.addEventListener("input", toggleActiveClass);
+inputElement.addEventListener("change", toggleActiveClass);

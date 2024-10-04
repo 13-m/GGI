@@ -505,7 +505,8 @@ body {
 }
 
 .main__input-date:active,
-.main__input-date:focus {
+.main__input-date:focus,
+.main__input-date.active {
   color: #000;
 }
 
@@ -522,6 +523,12 @@ body {
 }
 
 .main__input-date:focus + .label-placeholder {
+  top: 10px;
+  left: 20px;
+  font-size: 12px;
+}
+
+.label-placeholder.active {
   top: 10px;
   left: 20px;
   font-size: 12px;
