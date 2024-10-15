@@ -5,7 +5,8 @@
 }
 
 /* tooltip */
-.achievement__subtitle {
+.achievement__subtitle,
+.main__subtitle {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -16,13 +17,14 @@
 .tooltip-icon {
   display: block;
   width: 20px;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  height: 20px;
+  flex-shrink: 0;
   background: url("../img/tooltip-icon.svg") no-repeat center center / contain;
   cursor: pointer;
 }
 
-.achievement__subtitle .tooltip__container {
+.achievement__subtitle .tooltip__container,
+.main__subtitle .tooltip__container {
   visibility: hidden;
   background-color: #fff;
   color: #fff;
@@ -41,7 +43,8 @@
   opacity: 0;
 }
 
-.achievement__subtitle:hover .tooltip__container {
+.achievement__subtitle:hover .tooltip__container,
+.main__subtitle:hover .tooltip__container {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
